@@ -13,17 +13,17 @@ Tareas:
 - Subir a un repositorio de ustedes en github.
 */
 
-package Ej_1
+package main
 import "fmt"
 
 
-func Ej_1() {
+func main() {
 	var puntajes = [12]int{1, 5, 1, 2, 5, 4, 2, 1, 3, 3, 4, 1}
 
-	fmt.Printf("Puntajes: %v /n", puntajes)
-	fmt.Printf("Puntajes recientes: %v /n", puntajesRecientes(puntajes[:]))
-	fmt.Printf("Estadisticas por puntaje:/n %v", contarPuntaje(puntajes[:]))
-	fmt.Printf("Resultado general: %v", resultadoGeneral(puntajes[:]))
+	fmt.Printf("Puntajes: %v \n", puntajes)
+	fmt.Printf("Puntajes recientes: %v \n", puntajesRecientes(puntajes[:]))
+	fmt.Printf("Estadisticas por puntaje: %v\n", contarPuntaje(puntajes[:]))
+	fmt.Printf("Resultado general:\n %v", resultadoGeneral(puntajes[:]))
 }
 
 func puntajesRecientes(puntajes []int) []int {
@@ -38,6 +38,8 @@ func contarPuntaje(puntajes []int) map[int]int{
 	for i:=0; i < len(puntajes); i++ {
 		var _, keyExist = contPuntajes[puntajes[i]]
 		if(!keyExist) {
+			contPuntajes[puntajes[i]] += 1
+		} else {
 			contPuntajes[puntajes[i]] += 1
 		}
 	}
