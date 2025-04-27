@@ -1,0 +1,11 @@
+Singleton
+Thread
+Concurrencia
+api Go
+semaforos de lectura y escritura
+Redis - microservicios
+gRCp
+gin-gonic - dependencia
+clip
+go annottions
+uuid - librería
