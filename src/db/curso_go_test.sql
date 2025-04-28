@@ -1,0 +1,20 @@
+CREATE TABLE users (
+    id VARCHAR(255) PRIMARY KEY NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    address TEXT NOT NULL,
+    nickname VARCHAR(255) NOT NULL,
+    createdAt DATETIME NOT NULL,
+    updatedAt DATETIME NOT NULL,
+    version INT NOT NULL
+);
+
+CREATE TABLE sales (
+    id VARCHAR(255) PRIMARY KEY NOT NULL,
+    userId VARCHAR(255) NOT NULL,
+    amount FLOAT NOT NULL
+    status VARCHAR(255) NOT NULL
+    createdAt DATETIME NOT NULL
+    updatedAt DATETIME NOT NULL
+    version INT NOT NULL
+    FOREIGN KEY (userId) REFERENCES users(id)
+)
